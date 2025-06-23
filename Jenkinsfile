@@ -11,7 +11,7 @@ agent any
 			steps{
 				echo 'deploying...'
 				sh 'docker rm -f html-app-container || true'
-				sh 'docker run -d --name html-app-container -p 8081:80 docker-image'
+				sh 'docker run -d --name html-app-container -p 8000:80 docker-image'
 			}
 		}
 		stage('Can Jenkins talk to Docker?') {
