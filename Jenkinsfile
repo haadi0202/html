@@ -14,5 +14,10 @@ agent any
 				sh 'docker run -d --name html-app-container -p 8081:80 docker-image'
 			}
 		}
-	}
+		stage('Can Jenkins talk to Docker?') {
+            		steps {
+                		sh 'whoami'
+                		sh 'docker ps'
+            		}
+		}
 }
